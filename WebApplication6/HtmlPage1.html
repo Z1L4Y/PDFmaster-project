@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+
+    <div class="page" id="savingPage" style="background-image: url(https://bvdconnector.solutionswork.space:8551//apps/assets/SVC/All/SVC2.png);">
+        <p class="Total_annual_savings" id="TotalAnnualSavings">$1,000,000</p>
+
+        <p class="Total_CC_savings" id="TotalCCsavings">$640,000</p>
+        <p class="Total_FS_savings" id="TotalFSsavings">$360,000</p>
+    </div>
+
+    <div class="page" id="page8" style="background-image: url(https://bvdconnector.solutionswork.space:8551/apps/assets/SVC/CC/CC6.png);">
+        <p class="PageNum" id="PageNum8">8</p>
+        <div style="height: 209.14px"></div>
+
+        <div class="index_div">
+
+
+            <div class="index_box" id="index_cc1">
+                <div class="index_text_bold">Number of Contacts Handled per Year</div>
+                <div class="index_text">Total number of contacts (or cases) your customer service department handles per year.</div>
+                <div class="index_value">{{index_cc_1}}</div>
+                <div class="index_underLine"></div>
+            </div>
+
+
+            <div class="index_box" id="index_cc2">
+                <div class="index_text_bold">Cost per Contact Handled</div>
+                <div class="index_text">Average cost per contact (or case) handled at your company.</div>
+                <div class="index_value">{{currency}}{{index_cc_2}}</div>
+                <div class="index_underLine"></div>
+            </div>
+
+            <div class="index_box" id="index_cc3">
+                <div class="index_text_bold">Cost per Chatbot Interaction</div>
+                <div class="index_text">Average cost per chatbot interaction at your company.</div>
+                <div class="index_value">{{currency}}{{index_cc_3}}</div>
+                <div class="index_underLine"></div>
+            </div>
+
+            <div class="index_box" id="index_cc4">
+                <div class="index_text_bold">Cost per Agent (Hourly)</div>
+                <div class="index_text">Average hourly cost per agent at your company.</div>
+                <div class="index_value">{{currency}}{{index_cc_4}}</div>
+                <div class="index_underLine"></div>
+            </div>
+
+            <div class="index_box" id="index_cc5">
+                <div class="index_text_bold">Average Case Handle Time (Minutes)</div>
+                <div class="index_text">Average handling time in minutes for a case at your company.</div>
+                <div class="index_value">{{index_cc_5}}</div>
+                <div class="index_underLine"></div>
+            </div>
+
+            <div class="index_box" id="index_cc6">
+                <div class="index_text_bold">Average Agent Admin Time (Minutes)</div>
+                <div class="index_text">Average admin time in minutes for a case at your company.</div>
+                <div class="index_value">{{index_cc_6}}</div>
+                <div class="index_underLine"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <style>
+        @font-face {
+            font-family: 'SalesForceRegular';
+            src: url(https://bvdconnector.solutionswork.space:8551/apps/fonts/SalesforceSans-Regular.ttf) format('truetype');
+        }
+
+        @font-face {
+            font-family: 'AventGradeSalesforce';
+            src: url(https://bvdconnector.solutionswork.space:8551/apps/fonts/AvantGardeForSalesforce-Demi.ttf) format('truetype');
+        }
+
+        @font-face {
+            font-family: 'SalesForceRegularBook';
+            src: url(https://bvdconnector.solutionswork.space:8551/apps/fonts/SalesforceSans-Book.ttf) format('truetype');
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .page {
+            margin: 0;
+            padding: 0;
+            /*page-break-inside: avoid;*/
+            background-image: url(https://bvdconnector.solutionswork.space:8551/apps/assets/SVC/CC/CC2.png);
+            background-size: cover;
+            /* A4 page dimensions in pixels */
+            height: 1122.5px;
+            width: 793.7px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .Total_annual_savings {
+            margin: 0px;
+            position: absolute;
+            left: 66px;
+            top: 623.2px;
+            font-family: 'AventGradeSalesforce';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 62px;
+            line-height: 100%;
+            color: #032D60;
+        }
+
+        .Total_CC_savings {
+            margin: 0px;
+            position: absolute;
+            left: 66px;
+            top: 762.84px;
+            font-family: 'AventGradeSalesforce';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 31px;
+            line-height: 100%;
+            color: #032D60;
+        }
+
+        .Total_FS_savings {
+            margin: 0px;
+            position: absolute;
+            left: 421.56px;
+            top: 762.84px;
+            font-family: 'AventGradeSalesforce';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 31px;
+            line-height: 100%;
+            color: #032D60;
+        }
+
+        .index_div {
+            left: 66px;
+            position: relative;
+            width: 663px;
+            min-height: 746px;
+        }
+
+        .index_box {
+            margin-top: 15.53px;
+            position: relative;
+            width: 663px;
+            height: 46.6px;
+        }
+
+        .index_text_bold {
+            letter-spacing: 0.3px;
+            position: absolute;
+            left: 15.54px;
+            font-family: 'SalesForceRegular';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12.9452px;
+            line-height: 125%;
+            color: #000000;
+        }
+
+        .index_text {
+            letter-spacing: 0.1px;
+            position: absolute;
+            left: 15.54px;
+            bottom: 15.6px;
+            font-family: 'SalesForceRegularBook';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 11.65px;
+            line-height: 14.56px;
+            color: #000000;
+        }
+
+
+        .index_value {
+            position: absolute;
+            width: 152.01px;
+            height: 19px;
+            top: 6.47px;
+            left: 483.07px;
+            font-family: 'SalesForceRegular';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15.5342px;
+            line-height: 125%;
+            color: #000000;
+            text-align: right;
+        }
+
+
+        .index_underLine {
+            position: absolute;
+            bottom: 0px;
+            width: 663px;
+            height: 1px;
+            background-color: #000000;
+        }
+    </style>
+</body>
+</html>

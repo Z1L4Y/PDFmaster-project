@@ -1,0 +1,342 @@
+﻿@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/montserrat-variablefont_wght.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins-light.otf') format('opentype');
+}
+
+
+body, html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f6f9;
+}
+
+
+.PageForm{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.PageHeader {
+    position: relative;
+    font-family: Poppins;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    height: 64px;
+    box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+}
+.HeaderLogo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.HeaderText {
+    color: #696969;
+    transition: all 0.1s;
+}
+.HeaderText:hover{
+    color: #0176d3;
+    cursor: pointer;
+}
+.headerLink{
+    text-decoration: none;
+    color: #696969
+}
+.headerLink:hover{
+    color: #0176d3;
+    cursor: pointer;
+}
+
+.informationBox {
+    align-self: center;
+    background-color: white;
+    border: 1px solid #d8dde6;
+    border-right: none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    min-width: 420px;
+    height: 490px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    animation-duration: 1s;
+    animation-name: lineInserted;
+    transition: height 0.3s;
+}
+
+.PageTitle {
+    margin-top: 50px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.PageTitle header{
+    font-family: Montserrat;
+    font-size: calc(15px + 0.390625vw);
+}
+.PageTitle h1 {
+    font-family: Montserrat;
+    font-size: calc(11px + 0.390625vw);
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+/*HIDE LOGIN*/
+.login{
+    transition: all 0.2s;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    font-family: Poppins;
+    display: flex;
+    flex-direction: column;
+}
+
+.login header {
+    padding-top: 45px;
+    font-size: 25px;
+    font-family: Poppins;
+    text-align: center;
+}
+.headerUnderline {
+    margin-top: 1px;
+    align-self: center;
+    width: 100px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #66b8ed;
+    margin-bottom: 50px;
+}
+
+
+.login-inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.login-inputs input[type=text], .login-inputs input[type=password]{
+    overflow: hidden;
+    padding: 7px;
+    padding-left: 48px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    width: 100%;
+}
+.login-inputs p{
+    margin-bottom: 4px;
+    padding-left: 3px;
+}
+.input-field {
+    position: relative;
+    width: 75%;
+    margin-bottom: 20px;
+    transition: all 0.1s;
+}
+
+.login-inputs input[type=text]:focus, .login-inputs input[type=password]:focus {
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    outline: none;
+    transition: all 0.1s;
+}
+
+.Password, .Email{
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+.Password img{
+    cursor: pointer;
+    padding-left: 3px;
+    padding-right: 3px;
+    position: absolute;
+    height: 29px;
+}
+.Email img{
+    position: absolute;
+    padding-left: 3px;
+    padding-right: 3px;
+    position: absolute;
+    height: 28px;
+
+    
+}
+.ImagePosition {
+    top: 0;
+    left: 1px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    width: 39px;
+    border-right: 1px solid #aeaeae;
+    height: 30px;
+    /*border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;*/
+    /*background-color: #f3f3f3;*/
+}
+.ImagePosition img{
+    padding: 0;
+    margin-top: 0;
+}
+
+
+
+.login input[type=submit] {
+    display: none;
+}
+
+.submitButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    background-color: #0070d2;
+    align-self: center;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.15s;
+    margin-top: 80px;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.submitButton:hover{
+    background-color: #005eaf;
+}
+
+.signup {
+    transition: all 0.2s;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    font-family: Poppins;
+    display: flex;
+    flex-direction: column;
+}
+
+.signup header {
+    padding-top: 45px;
+    font-size: 25px;
+    font-family: Poppins;
+    text-align: center;
+}
+
+.signup input[type=submit] {
+    display: none;
+}
+.signup .submitButton{
+    margin-bottom: 30px;
+}
+
+
+
+
+/*Add the picture in the right side - the ability to change login or singup*/
+.Mainbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.loginOrSignup {
+    font-family: Poppins;
+    color: white;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 492px;
+    width: 300px;
+    border: none;
+    background: url("Background/BlueBackground.jpg");
+    background-position-x: 300px;
+    background-size: cover;
+    transition: height 0.3s;
+}
+
+.signupText {
+    margin-top: -30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+.inside-header {
+    font-family: Poppins;
+    font-size: 26px;
+    font-weight: normal;
+}
+.insdie-text {
+    margin-top: 30px;
+    font-family: Montserrat;
+    font-weight: 300;
+    font-size: 14px;
+    width: 240px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    text-align: center;
+}
+.signupButton {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+    background-color: white;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.HaveAcc {
+    margin-top: 40px;
+    font-family: Montserrat;
+    font-weight: 300;
+    font-size: 11px;
+}
+
+
+/*Logo*/
+.InsideLogoPic {
+    position: absolute;
+    height: 56px;
+    bottom: 28px;
+    left: 22px;
+}
+.logo{
+    height: 64px;
+}
+
+/*Errors*/
+.SUEmailerror{
+    width: 100%;
+    color: red;
+    position: absolute;
+    font-size: 12px;
+    margin-left: 2px;
+    font-family: Poppins;
+    display: none;
+}

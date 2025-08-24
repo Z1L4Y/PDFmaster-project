@@ -1,0 +1,438 @@
+﻿@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins-light.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Code';
+    src: url('fonts/cascadia.woff') format('woff');
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*Header*/
+
+.Header {
+    margin: 0;
+    position: relative;
+    width: 100%;
+    height: 64px;
+    border: 1px solid #f1efef;
+    overflow: hidden;
+    border-left: 0;
+    display: flex;
+    flex-direction: row;
+}
+.shadow-md {
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+}
+
+.Back {
+    position: relative;
+    cursor: pointer;
+    height: 100%;
+    width: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #f1efef;
+}
+.Back:hover{
+    background-color: #090088;
+    border-color: #090088;
+}
+.Back:hover svg{
+    fill: #ffffff
+}
+.Back svg{
+    position: absolute;
+    height: 50%;
+}
+
+
+.FileName{
+    position: relative;
+    display: flex;
+    align-content: center;
+    height: 100%;
+    width: 50%;
+}
+.FileName h1{
+    padding-left: 20px;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.headerButtons {
+    margin-right: 1.5%;
+    position: absolute;
+    width: 240px;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.SaveButton {
+    margin-top: 3px;
+    position: relative;
+    cursor: pointer;
+    height: 58px;
+    display: flex;
+    width: 100px;
+    border-radius: 4px;
+    background-color: #58bf27ff;
+    justify-content: center;
+    align-content: center;
+    transition: all 0.25s;
+}
+.SaveButton h1{
+    color: white;
+    font-family: Poppins;
+    font-size: 18px;
+    align-self: center;
+}
+.SaveButton:hover{
+    background-color: #51b024ff;
+}
+input[type=submit]{
+    display: none;
+}
+/*.Back::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 1px;
+    background: #f1efef;
+}*/
+/*Coding Area*/
+.CodingArea {
+    margin-top: 10px;
+/*    height: 100%;*/
+    height: calc(100% - 74px);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.Coding{
+    position: relative;
+    width: 55%;
+    height: 98%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.CodingHeader{
+    width: 100%;
+    height: 64px;
+    background-color: #1e1e1e;
+}
+.Content{
+    position: relative;
+    margin-left: 3%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+.Content h1{
+    align-self: center;
+    font-family: Poppins;
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+}
+.ContentHeader {
+    display: flex;
+    align-self: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    height: 70%;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+
+.CodingBox {
+    box-shadow: 0px 10px 20px -10px #1e1e1e;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #1e1e1e;
+    border-top: 3px solid #2c2c2f;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+.CodingBox #Code, .CodingBox #Style, .CodingBox #Json{
+    width: 100%;
+    height: 100%;
+}
+
+.CodingBox textarea{
+    font-family: Code;
+    width: calc(95% - 4px);
+    height: calc(100% - 4px);
+    background: none;
+    resize: none;
+    overflow: auto;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    overflow-y: scroll;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.CodingBox textarea::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+.CodingBox textarea::-webkit-scrollbar-thumb {
+    background-color: #929292;
+    border-radius: 5px;
+    border: 5px solid transparent;
+}
+
+.CodingBox textarea::-webkit-scrollbar-thumb:hover {
+    background-color: #808080;
+}
+
+.CodingBox textarea::-webkit-scrollbar-track {
+    background-color: #4d4d4d;  
+}
+.CodingBox textarea::-webkit-scrollbar-corner {
+    background-color: #929292;
+}
+
+.LineNumbers {
+    margin-top: 1px;
+    text-align: center;
+    font-size: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(5% + 1px);
+    height: calc(100% - 12px);
+    color: #8a8a8a;
+    font-family: Code;
+    box-sizing: border-box;
+    overflow: hidden;
+    visibility: visible;
+}
+
+
+
+/*Preview PDF File*/
+
+.Preview{
+    position: relative;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.pdfViewer{
+    margin-left: 40px;
+}
+
+/*Settings Section*/
+
+.SettingsIcon{
+    height: 40px;
+    color: #aaa;
+    cursor: pointer;
+}
+.SettingsIcon:hover .SettingsPath{
+    transition: all 0.2s;
+    color: #606060;
+}
+.SettingsPath {
+    transition: 0.2s;
+    color: #4b4b4b;
+}
+.SettingsDiv {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.OptionContent {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    margin-left: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.settingsDisplay{
+    width: 100%;
+    height: 100%;
+    margin-left: 6%;
+    margin-top: 3%;
+    font-family: Poppins;
+}
+.settingsHeader header {
+    font-size: 36px;
+    color: white;
+}
+.settingsHeader {
+    padding-bottom: 80px;
+}
+
+
+.NTinputs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.nameInput {
+    position: relative;
+    color: white;
+    width: 450px;
+    overflow: hidden;
+}
+
+.NTinputs input {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding-top: 30px;
+    border: none;
+    font-size: 17px;
+}
+
+.nameStyle {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid white;
+}
+
+.nameStyle::after {
+        
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid #5fa8d3;
+    left: 0px;
+    bottom: -1px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.inputext {
+    position: absolute;
+    bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.NTinputs input:focus + .nameStyle .inputext {
+    transform: translateY(-100%);
+}
+
+.NTinputs input:valid + .nameStyle .inputext {
+    transform: translateY(-100%);
+}
+
+.NTinputs input:focus + .nameStyle::after, NTinputs input:valid + .nameStyle::after {
+    transform: translateX(0%);
+}
+
+/*select style*/
+.selectDisplay{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    position: relative; 
+    width: 210px;
+    height: 40px;
+}
+.selectBox {
+    border: none;
+    appearance: none;
+    padding: 0 30px 0 15px;
+    width: 100%;
+    color: white;
+    background-color: #31363F;
+    font-size: 16px;
+}
+.selectIcon {
+    width: 40px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222831;
+    pointer-events: none;
+}
+.selectIcon svg{
+    width: 20px;
+    pointer-events: none;
+
+}
+
+
+/*Save Settings button*/
+
+.SaveSettings {
+    margin-top: 80px;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 16px;
+}
+
+.SaveSettings p {
+    margin-left: 300px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: #395144;
+    border-radius: 10px;
+    color: white;
+    transition: 0.15s;
+}
+
+.SaveSettings p:hover {
+    transition: 0.15s;
+    background-color: #2d4237;
+}
+
+.pageDimensions {
+    color: #aaa;
+    padding-left: 15px;
+    font-size: 12px;
+    font-family: Poppins;
+    width: 100%;
+    position: absolute;
+}
